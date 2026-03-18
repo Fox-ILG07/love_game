@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Petit jeu pour toi mon amour ❤️</title>
+    <title>Petit jeu pour toi ❤️</title>
     <style>
         body {
             text-align: center;
@@ -16,6 +16,7 @@
             border: none;
             border-radius: 10px;
             cursor: pointer;
+            transition: 0.3s;
         }
         #yes {
             background-color: #ff4d88;
@@ -29,18 +30,27 @@
 
 <body>
 
-    <h1>Petit jeu pour toi mon amour 💕</h1>
+    <h1>Petit jeu pour toi 💕</h1>
     <h2>Tu m’aimes ? 😏</h2>
 
-    <button id="yes" onclick="showLove()">Oui ❤️</button>
-    <button id="more" onclick="showLove()">Oui mais beaucoup ❤️❤️</button>
+    <button id="yes" onclick="growButton()">Oui ❤️</button>
+    <button id="more" onclick="finalLove()">Oui mais encore plus ❤️❤️</button>
 
     <h2 id="message"></h2>
 
     <script>
-        function showLove() {
-            document.getElementById("message").innerHTML =
-            "Moi aussi je t’aime énormément 😘❤️ Tu es tout pour moi 💕";
+        let size = 18;
+
+        function growButton() {
+            size += 10;
+            let moreBtn = document.getElementById("more");
+            moreBtn.style.fontSize = size + "px";
+            moreBtn.style.padding = (size) + "px";
+        } 
+           document.getElementById("yes").style.opacity = "0.5";
+
+        function finalLove() {
+            document.body.innerHTML = "<h1>😏 Je savais…</h1><h2><h3><h4>Tu m’aimes trop<h2>Tu es officiellement condamnée à m’aimer pour toujours 😌❤️❤️<h3>Moi aussi je t’aime énormément 😘💕</h4>";
         }
     </script>
 
