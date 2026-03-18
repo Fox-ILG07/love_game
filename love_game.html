@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Petit jeu pour toi mon amour ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background-color: #ffe6f0;
+            margin-top: 80px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #yes {
+            background-color: #ff4d88;
+            color: white;
+        }
+        #more {
+            background-color: #ff99cc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Petit jeu pour toi mon amour 💕</h1>
+    <h2>Tu m’aimes ? 😏</h2>
+
+    <button id="yes" onclick="showLove()">Oui ❤️</button>
+    <button id="more" onclick="showLove()">Oui mais beaucoup ❤️❤️</button>
+
+    <h2 id="message"></h2>
+
+    <script>
+        function showLove() {
+            document.getElementById("message").innerHTML =
+            "Moi aussi je t’aime énormément 😘❤️ Tu es tout pour moi 💕";
+        }
+    </script>
+
+</body>
+</html>
